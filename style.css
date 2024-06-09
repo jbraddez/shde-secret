@@ -1,0 +1,292 @@
+*{
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 300;
+    color: #f2f2f2;
+}
+.logo{
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+    margin: 15px;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+title{
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background-color: #000000;
+    background-image: url('./images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+
+
+.spotify-img{
+    width: 120px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    object-fit: cover;
+    transition: 200ms ease-in-out;
+}
+
+.contact-me{
+    color: #f2f2f2;
+    position: absolute;
+    right: 30px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: none;
+    margin: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+
+.contact-me:hover{
+    top: 47%;
+    text-decoration: underline;
+}
+
+.logo:hover{
+    color: #d9d9d9;
+    rotate: 2deg;
+}
+
+.contact-me,.logo{
+    text-shadow: 6px 6px 14px #000000, -6px -6px 14px #000000;
+}
+
+.social{
+    object-fit: cover;
+    max-width: 50px ;
+    max-height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+}
+
+footer a{
+    width: 50px ;
+    height: 50px;
+}
+
+footer a:hover{
+    transform: translateY(-5px);
+}
+
+.spotify-img:hover{
+    transform: scale(1.05);
+}
+
+footer{
+    position: fixed;
+    bottom: -15px;
+    right: 0;
+    width: 350px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-around;
+    flex-direction: row;
+}
+
+/* BASE STYLES ABOVE --- SPECIFIC STYLES BELOW */
+
+section.new-release{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section.new-release img{
+    width: 200px;
+    height: 200px;
+}
+
+section.new-release h3{
+    transform: translateY(-20px);
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    border-top: 1px solid rgba(131, 131, 131, 0.4);
+    border-bottom: 1px solid rgba(131,131,131,0.4);
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 13s linear infinite;
+}
+
+.text {
+    flex-shrink: 0;
+    padding-right: 2rem; /* Adjust as needed */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-45%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+section.albums{
+    position: absolute;
+    top: 580px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+
+}
+.albums-cont a{
+    text-decoration: none !important;
+}
+
+section.albums h1{
+    text-align: center;
+    left:50%;
+}
+
+.album-card h2{
+    text-decoration: none !important;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: 350ms ease-in-out;
+}
+
+.album-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 10px;
+}
+
+.album-card:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.album-card:hover h2{
+    transform: translateY(-65%);
+}
+
+
+
+.albums-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    text-align: center;
+    margin: 15px;
+    flex: 1 1 300px; /* Flexbox properties for flexibility */
+    max-width: 300px; /* Adjust max-width as needed */
+    transition: 400ms ease-in-out;
+}
+
+
+section.contact-sec{
+    position: absolute; 
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-sec div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.con-link{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+
+.con-link img{
+    object-fit: contain;
+    max-width: 50px;
+    max-height: 50px;
+    transition: 350ms ease-in-out;
+}
+
+.con-link:hover img{
+    transform: translateY(-3px);
+
+}
+
+#play-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+#play-button:focus {
+    outline: none;
+}
