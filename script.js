@@ -4,6 +4,7 @@ function spotifySize(){
     var socialcont = document.querySelectorAll('.social-cont');
     var social = document.querySelectorAll('.social');
     var footer = document.querySelector('footer');
+    var logo = document.querySelector('.logo');
 
     if (screenWidth < 750){
         spotify.style.width = '';
@@ -18,6 +19,7 @@ function spotifySize(){
         });
         footer.style.flexDirection = 'column';
         footer.style.width ='50px';
+        logo.style.fontSize = '3rem';
     }else{
         spotify.style.width = '160px';
         socialcont.forEach(function(item){
@@ -31,6 +33,7 @@ function spotifySize(){
         });
         footer.style.flexDirection = 'row';
         footer.style.width ='';
+        logo.style.fontSize = '';
     }
 }
 
