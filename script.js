@@ -1,10 +1,12 @@
-function spotifySize(){
+function allSizes(){
     var screenWidth = window.innerWidth;
     var spotify = document.querySelector('.spotify-img');
     var socialcont = document.querySelectorAll('.social-cont');
     var social = document.querySelectorAll('.social');
     var footer = document.querySelector('footer');
     var logo = document.querySelector('.logo');
+    var links = document.querySelector('.links');
+    var nav = document.querySelector('nav');
 
     if (screenWidth < 750){
         spotify.style.width = '';
@@ -20,6 +22,8 @@ function spotifySize(){
         footer.style.flexDirection = 'column';
         footer.style.width ='50px';
         logo.style.fontSize = '3rem';
+        links.style.display = '';
+        nav.style.display = 'block';
     }else{
         spotify.style.width = '160px';
         socialcont.forEach(function(item){
@@ -34,8 +38,10 @@ function spotifySize(){
         footer.style.flexDirection = 'row';
         footer.style.width ='';
         logo.style.fontSize = '';
+        links.style.display = 'block';
+        nav.style.display = 'none';
     }
 }
 
-window.addEventListener('resize', spotifySize);
-window.addEventListener('load', spotifySize);
+window.addEventListener('resize', allSizes);
+window.addEventListener('load', allSizes);
